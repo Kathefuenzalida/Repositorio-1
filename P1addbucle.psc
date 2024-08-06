@@ -1,24 +1,17 @@
-Algoritmo P1addbucle
+Algoritmo Proyecto1KatheFuenzalida
+	//Defino variables
 	definir nom, destino Como Cadena
 	definir peso,cupon,tax,desc, total, p, q, costoenvio, pesototal, costofijo como real
 	definir i, pedidos Como entero
 	
-	//Crear un array para realizar lista de pedidos de los productos
+	//Dimensiono arreglo para cumplir con requisito de entregable, la idea es que el usuario ingrese su n√πmero de pedido
 	Dimension pedidos[1]	
-	//Realizar ingreso de pedidos 
+	Escribir "Hola, Bienvenido/a a tu carro de compras"
+	//Usuario ingresa su n√πmero de pedido
 	Para i<-1 Hasta 1 Con Paso 1 Hacer
-		Escribir "Pedido cliente: "
+		Escribir "Ingrese el n√πmero de su pedido: "
 		Leer pedidos[i]
 	Fin Para
-	//Cantidad de pedidos 
-	Escribir "La cantidad de pedidos ingresados son:"
-	//Para i<-0 Hasta 1 Con Paso 1 Hacer
-		//Si pedidos[i]>=0 Entonces
-			//Escribir pedidos[i]
-		//FinSi
-	//Fin Para
-		
-		Escribir "Hola, Bienvenido/a a tu carro de compras"
 		p<-0
 		cupon<-0
 		tax<-0
@@ -51,20 +44,20 @@ Algoritmo P1addbucle
 			leer q
 		FinMientras
 		//pido cupon de descuento y valido que el dato ingresado este correcto
-		Escribir "Tienes cupÛn de descuento?, si no tienes uno puedes poner 0"
+		Escribir "Tienes cup√≥n de descuento?, si no tienes uno puedes poner 0"
 		leer cupon
 		si cupon<0 entonces
-			Escribir "Ingresa un cupÛn de descuento v·lido" 
+			Escribir "Ingresa un cup√≥n de descuento v√°lido" 
 			leer cupon
 		finsi
 		//pido impuesto y valido que el dato ingresado este correcto
 		Escribir "Ingresa el impuesto"
 		leer tax
 		si tax<=0 entonces
-			Escribir "Ingresa impuesto v·lido" 
+			Escribir "Ingresa impuesto v√°lido" 
 			leer tax
 		finsi
-		//si el cliente compra mas de 2 articulos le harÈ un descuento de 5% sobre el total
+		//si el cliente compra mas de 2 articulos le har√© un descuento de 5% sobre el total
 		si q>=2 entonces
 			desc<-5
 			total<-total*(1-desc)
@@ -73,7 +66,7 @@ Algoritmo P1addbucle
 		Escribir "Ingresa el peso del producto"
 		leer peso
 		si peso<=0 entonces
-			Escribir "Ingresa peso v·lido" 
+			Escribir "Ingresa peso v√°lido" 
 			leer peso
 		finsi
 		pesototal<-peso*q
@@ -90,7 +83,7 @@ Algoritmo P1addbucle
 		Escribir "Producto: ", nom
 		Escribir "Precio: $", p
 		si cupon>0 entonces
-			Escribir "- Descuento cupÛn: ", cupon "%"
+			Escribir "- Descuento cup√≥n: ", cupon "%"
 		sino 
 			cupon<-0
 		FinSi
@@ -100,7 +93,7 @@ Algoritmo P1addbucle
 		SiNo
 			desc<-0
 		FinSi
-		Escribir "Costo envÌo: $", costoenvio
+		Escribir "Costo env√≠o: $", costoenvio
 		total<-p-p*cupon/100
 		//escribir total
 		total<-total+total*tax/100
