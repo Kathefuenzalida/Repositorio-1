@@ -1,7 +1,7 @@
 Proyecto 1: Algoritmo de Sistemas de Costo.
 
 Estudiante: Katherine Fuenzalida
-Cohorte: 16
+Cohorte: 19
 Descripción: se reaizó algoritmo que simula carrito de compras.
 Características del algoritmo: 
 - Los datos que requiere el sistema para calcular el costo total de la compra deben ser ingresados por el usuario. Estos datos serán validados por el algoritmo y se fuerza a que el usuario ingrese el tipo de dato correcto en ingreso. 
